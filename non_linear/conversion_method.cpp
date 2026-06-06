@@ -85,7 +85,7 @@ int main()
     p_backward = fftw_plan_dft_1d(M, in, out, FFTW_BACKWARD, FFTW_ESTIMATE);
     auto start = chrono::steady_clock::now();
 
-    ofstream file(is_fft ? "non_linear/conversion_method_fftw.csv" : "non_linear/conversion_method.csv");
+    ofstream file(is_fft ? "non_linear/data/conversion_method_fftw.csv" : "non_linear/data/conversion_method.csv");
 
     if (!file.is_open())
         cout << "file not found" << endl;
