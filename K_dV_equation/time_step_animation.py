@@ -1,3 +1,5 @@
+import matplotlib
+matplotlib.use('Agg')
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -23,5 +25,6 @@ for i in range(len(df)):
     ims.append(im)
 
 ani = animation.ArtistAnimation(fig, ims, interval=100)
-ani.save("K_dV_equation/data/linear_delete_animation.gif", writer="pillow")
+ani.save("K_dV_equation/data/linear_delete.gif", writer="pillow")
 plt.close()
+print("animation done")
