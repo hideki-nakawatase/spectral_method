@@ -32,7 +32,7 @@ Eigen::VectorXcd non_linear_term(Eigen::VectorXcd &u_hat)
 int main()
 {
   ofstream file("non_linear/spectral_non_linear.csv");
-  Eigen::VectorXcd u(M), du1(M), du2(M), du3(M), du4(M), k1(M), k2(M), k3(M), k4(M), tmp(M);
+  Eigen::VectorXcd u(M);
   u.setZero();
   for (int i = 0; i < M; i++)
     u[i] = sin(i * dx);
